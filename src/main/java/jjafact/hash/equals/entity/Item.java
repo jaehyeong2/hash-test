@@ -17,6 +17,9 @@ public class Item {
     @ManyToOne(fetch = FetchType.LAZY)
     private Category category;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Shop shop;
+
     private String name;
     private int price;
 }
