@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-public class Order {
+public class Order extends BaseTimeEntity{
     @Id
     @GeneratedValue
     private Long id;

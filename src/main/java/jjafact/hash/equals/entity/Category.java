@@ -13,7 +13,7 @@ import javax.persistence.Id;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-public class Category {
+public class Category extends BaseTimeEntity{
     @Id
     @GeneratedValue
     private Long id;

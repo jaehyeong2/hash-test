@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
-public class Sales {
+public class Sales extends BaseTimeEntity{
     @Id
     @GeneratedValue
     private Long id;

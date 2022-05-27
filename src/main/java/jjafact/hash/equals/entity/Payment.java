@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
-public class Payment {
+public class Payment extends BaseTimeEntity{
 
     @Id @GeneratedValue
     private Long id;

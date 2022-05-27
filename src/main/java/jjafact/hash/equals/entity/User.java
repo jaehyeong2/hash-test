@@ -11,7 +11,7 @@ import javax.persistence.Id;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-public class User {
+public class User extends BaseTimeEntity{
     @Id @GeneratedValue
     private Long id;
 
