@@ -1,6 +1,5 @@
 package jjafact.hash.equals.api;
 
-import jjafact.hash.equals.dto.CreateShopReq;
 import jjafact.hash.equals.dto.ShopDto;
 import jjafact.hash.equals.service.ShopService;
 import lombok.RequiredArgsConstructor;
@@ -20,8 +19,8 @@ public class ShopApi {
     }
 
     @PostMapping("")
-    public ResponseEntity<String> createShop(@RequestBody CreateShopReq req){
-        return new ResponseEntity(shopService.createShop(req), HttpStatus.OK);
+    public ResponseEntity<String> createShop(@RequestBody ShopDto dto){
+        return new ResponseEntity(shopService.createShop(dto), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")

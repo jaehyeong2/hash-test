@@ -1,11 +1,7 @@
 package jjafact.hash.equals.service;
 
 import jjafact.hash.equals.dto.CategoryDto;
-import jjafact.hash.equals.dto.CreateCategoryReq;
-import jjafact.hash.equals.dto.CreateShopReq;
-import jjafact.hash.equals.dto.ShopDto;
 import jjafact.hash.equals.entity.Category;
-import jjafact.hash.equals.entity.Shop;
 import jjafact.hash.equals.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -28,7 +24,7 @@ public class CategoryService {
         return new CategoryDto(category);
     }
 
-    public String createCategory(CreateCategoryReq dto){
+    public String createCategory(CategoryDto dto){
         Category category = Category.create(dto);
         categoryRepository.save(category);
         return "Y";

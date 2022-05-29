@@ -1,6 +1,6 @@
 package jjafact.hash.equals.entity;
 
-import jjafact.hash.equals.dto.CreateCategoryReq;
+import jjafact.hash.equals.dto.CategoryDto;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -24,9 +24,9 @@ public class Category extends BaseTimeEntity{
         this.name = name;
     }
 
-    public static Category create(CreateCategoryReq req){
+    public static Category create(CategoryDto dto){
         return Category.builder()
-                .name(req.getName())
+                .name(dto.getName())
                 .build();
     }
 }

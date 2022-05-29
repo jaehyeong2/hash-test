@@ -1,10 +1,8 @@
 package jjafact.hash.equals.api;
 
-import jjafact.hash.equals.dto.CreateShopReq;
 import jjafact.hash.equals.dto.ItemDto;
 import jjafact.hash.equals.dto.ShopDto;
 import jjafact.hash.equals.service.ItemService;
-import jjafact.hash.equals.service.ShopService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

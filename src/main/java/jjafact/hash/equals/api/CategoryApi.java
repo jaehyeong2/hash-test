@@ -1,10 +1,8 @@
 package jjafact.hash.equals.api;
 
-import jjafact.hash.equals.dto.CreateCategoryReq;
-import jjafact.hash.equals.dto.CreateShopReq;
+import jjafact.hash.equals.dto.CategoryDto;
 import jjafact.hash.equals.dto.ShopDto;
 import jjafact.hash.equals.service.CategoryService;
-import jjafact.hash.equals.service.ShopService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,8 +20,8 @@ public class CategoryApi {
     }
 
     @PostMapping("")
-    public ResponseEntity<String> createShop(@RequestBody CreateCategoryReq req){
-        return new ResponseEntity(categoryService.createCategory(req), HttpStatus.OK);
+    public ResponseEntity<String> createShop(@RequestBody CategoryDto dto){
+        return new ResponseEntity(categoryService.createCategory(dto), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")

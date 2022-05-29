@@ -1,6 +1,6 @@
 package jjafact.hash.equals.entity;
 
-import jjafact.hash.equals.dto.CreateShopReq;
+import jjafact.hash.equals.dto.ShopDto;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -30,7 +30,7 @@ public class Shop extends BaseTimeEntity{
         this.location = location;
     }
 
-    public static Shop create(CreateShopReq dto){
+    public static Shop create(ShopDto dto){
         return Shop.builder()
                 .name(dto.getName())
                 .phone(dto.getPhone())

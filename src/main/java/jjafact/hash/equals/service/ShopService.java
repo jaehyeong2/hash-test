@@ -1,6 +1,5 @@
 package jjafact.hash.equals.service;
 
-import jjafact.hash.equals.dto.CreateShopReq;
 import jjafact.hash.equals.dto.ShopDto;
 import jjafact.hash.equals.entity.Shop;
 import jjafact.hash.equals.repository.ShopRepository;
@@ -8,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.imageio.spi.ServiceRegistry;
 import java.util.NoSuchElementException;
 
 @RequiredArgsConstructor
@@ -26,7 +24,7 @@ public class ShopService {
         return new ShopDto(shop);
     }
 
-    public String createShop(CreateShopReq dto){
+    public String createShop(ShopDto dto){
         Shop shop = Shop.create(dto);
         shopRepository.save(shop);
         return "Y";

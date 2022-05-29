@@ -1,6 +1,8 @@
 package jjafact.hash.equals.entity;
 
+import jjafact.hash.equals.dto.OrderDto;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -18,7 +20,36 @@ public class Order extends BaseTimeEntity{
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
 
-    private String name;
-    private String phone;
-    private String location;
+    @OneToOne(fetch = FetchType.LAZY)
+    private Shop shop;
+
+    private int price;
+
+    @Enumerated(EnumType.STRING)
+    private OrderState orderState;
+
+    public void cancelOrder() {
+        this.orderState = OrderState.CANCELED;
+    }
+
+    public enum OrderState{
+        ORDERED,CANCELED
+    }
+
+    @Builder
+    public Order(User user, Shop shop, int price,OrderState orderState) {
+        this.user = user;
+        this.shop = shop;
+        this.price = price;
+        this.orderState = orderState;
+    }
+
+    public static Order create(OrderDto dto,User user,Shop shop){
+        return Order.builder()
+                .shop(shop)
+                .user(user)
+                .price(dto.getPrice())
+                .orderState(OrderState.ORDERED)
+                .build();
+    }
 }
