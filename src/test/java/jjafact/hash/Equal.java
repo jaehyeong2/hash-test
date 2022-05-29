@@ -1,14 +1,13 @@
 package jjafact.hash;
 
-import jjafact.hash.equals.entity.Payment;
-import jjafact.hash.equals.entity.User;
+import jjafact.hash.business.entity.Payment;
+import jjafact.hash.business.entity.User;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 public class Equal {
 
@@ -16,8 +15,8 @@ public class Equal {
 
     @BeforeAll
     static void setUp(){
-        User lee = new User("lee", "01012341234");
-        User kim = new User("lee", "01012341234");
+        User lee = new User("lee", "01012341234","dasdasdasd2");
+        User kim = new User("lee", "01012341234", "dasdas  211 ");
 
         payments = Arrays.asList(Payment.builder()
                         .user(lee)
