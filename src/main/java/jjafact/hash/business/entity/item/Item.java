@@ -10,6 +10,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
@@ -28,18 +30,24 @@ public class Item extends BaseTimeEntity {
     private String name;
     private int price;
 
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "item")
+    private List<ItemImage> images = new ArrayList<>();
+
     @Builder
-    public Item(Category category, Shop shop, String name, int price) {
+    public Item(Long id,Category category, Shop shop, String name, int price) {
         this.category = category;
         this.shop = shop;
         this.name = name;
         this.price = price;
     }
-
     public static Item create(ItemDto dto){
         return Item.builder()
                 .name(dto.getName())
                 .price(dto.getPrice())
                 .build();
+    }
+
+    public void addImage(ItemImage image) {
+        this.images.add(image);
     }
 }

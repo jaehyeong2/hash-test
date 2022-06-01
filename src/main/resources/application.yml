@@ -15,3 +15,7 @@ spring:
     properties:
       hibernate.format_sql: true
 
+app:
+  filePath: /Users/wogud2/fileUploads
+  hash: 0049277389423274724040002388482939932
+
