@@ -1,7 +1,7 @@
 package jjafact.hash.business.service;
 
 import jjafact.hash.business.dto.CategoryDto;
-import jjafact.hash.business.entity.Category;
+import jjafact.hash.business.entity.item.Category;
 import jjafact.hash.business.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

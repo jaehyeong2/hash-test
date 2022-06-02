@@ -3,7 +3,7 @@ package jjafact.hash.business.service;
 import jjafact.hash.business.dto.OrderDto;
 import jjafact.hash.business.entity.Order;
 import jjafact.hash.business.entity.Shop;
-import jjafact.hash.business.entity.User;
+import jjafact.hash.business.entity.user.User;
 import jjafact.hash.business.repository.OrderRepository;
 import jjafact.hash.business.repository.ShopRepository;
 import lombok.RequiredArgsConstructor;

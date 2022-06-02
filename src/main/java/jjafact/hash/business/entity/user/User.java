@@ -1,6 +1,8 @@
-package jjafact.hash.business.entity;
+package jjafact.hash.business.entity.user;
 
+import jjafact.hash.business.entity.BaseTimeEntity;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -25,10 +27,15 @@ public class User extends BaseTimeEntity implements UserDetails {
     private String phone;
     private String password;
 
+    @Embedded
+    private Address address;
+
     @ElementCollection(fetch = FetchType.LAZY)
     private final List<String> roles = new ArrayList<>();
 
-    public User(String name, String phone,String password) {
+    @Builder
+    public User(String username,String name, String phone,String password) {
+        this.username = username;
         this.name = name;
         this.phone = phone;
         this.password = password;

@@ -2,7 +2,6 @@ package jjafact.hash.business.entity.item;
 
 import jjafact.hash.business.dto.ItemDto;
 import jjafact.hash.business.entity.BaseTimeEntity;
-import jjafact.hash.business.entity.Category;
 import jjafact.hash.business.entity.Shop;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -40,10 +39,12 @@ public class Item extends BaseTimeEntity {
         this.name = name;
         this.price = price;
     }
-    public static Item create(ItemDto dto){
+    public static Item create(ItemDto dto,Category category,Shop shop){
         return Item.builder()
                 .name(dto.getName())
+                .category(category)
                 .price(dto.getPrice())
+                .shop(shop)
                 .build();
     }
 

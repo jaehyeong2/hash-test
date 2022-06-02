@@ -1,6 +1,6 @@
 package jjafact.hash.business.repository;
 
-import jjafact.hash.business.entity.User;
+import jjafact.hash.business.entity.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

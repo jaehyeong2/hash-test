@@ -1,6 +1,6 @@
 package jjafact.hash.business.dto;
 
-import jjafact.hash.business.entity.Category;
+import jjafact.hash.business.entity.item.Category;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

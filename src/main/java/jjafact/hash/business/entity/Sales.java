@@ -1,5 +1,6 @@
 package jjafact.hash.business.entity;
 
+import jjafact.hash.business.entity.user.User;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;

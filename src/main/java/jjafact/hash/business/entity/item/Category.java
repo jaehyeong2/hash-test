@@ -1,6 +1,7 @@
-package jjafact.hash.business.entity;
+package jjafact.hash.business.entity.item;
 
 import jjafact.hash.business.dto.CategoryDto;
+import jjafact.hash.business.entity.BaseTimeEntity;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,7 +14,7 @@ import javax.persistence.Id;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-public class Category extends BaseTimeEntity{
+public class Category extends BaseTimeEntity {
     @Id
     @GeneratedValue
     private Long id;

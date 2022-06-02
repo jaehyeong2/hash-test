@@ -1,5 +1,5 @@
 package jjafact.hash.global.application;
-import jjafact.hash.business.entity.User;
+import jjafact.hash.business.entity.user.User;
 import jjafact.hash.business.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

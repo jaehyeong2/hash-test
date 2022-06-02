@@ -1,7 +1,7 @@
 package jjafact.hash.business.api;
 
 import jjafact.hash.business.dto.OrderDto;
-import jjafact.hash.business.entity.User;
+import jjafact.hash.business.entity.user.User;
 import jjafact.hash.business.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

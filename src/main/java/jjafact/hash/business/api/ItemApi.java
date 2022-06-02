@@ -31,7 +31,7 @@ public class ItemApi {
     }
 
     @PostMapping("")
-    public ResponseEntity<String> createItem(@RequestPart(value = "itemDto") ItemDto dto,
+    public ResponseEntity<String> createItem(@RequestPart ItemDto dto,
                                              @RequestPart(required = false) List<MultipartFile> images){
         return new ResponseEntity(itemService.createItem(dto,images), HttpStatus.OK);
     }

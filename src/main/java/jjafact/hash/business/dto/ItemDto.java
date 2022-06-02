@@ -12,9 +12,12 @@ public class ItemDto {
     private Long id;
     private String name;
     private int price;
+    private Long categoryId;
+    private Long shopId;
 
     public ItemDto(Item item) {
-        this.name = name;
-        this.price = price;
+        this.name = item.getName();
+        this.price = item.getPrice();
+        this.categoryId = item.getCategory().getId();
     }
 }

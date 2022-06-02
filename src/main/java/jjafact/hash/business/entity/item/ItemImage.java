@@ -36,7 +36,7 @@ public class ItemImage {
         return builder()
                 .item(item)
                 .path(path)
-                .isView("!")
+                .isView("Y")
                 .build();
     }
 }
